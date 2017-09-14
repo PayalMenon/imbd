@@ -52,7 +52,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
             holder.releaseDateView.setText(context.getResources().getString((R.string.release_date), movieResponse.getReleaseDate()));
             holder.votesView.setText(movieResponse.getVoteAverage().toString());
             holder.votersView.setText(context.getResources().getString((R.string.voters), movieResponse.getVotes()));
-            holder.ratingView.setRating(movieResponse.getPopularity().floatValue()/2);
+            holder.ratingView.setRating(movieResponse.getVoteAverage().floatValue()/2);
         }
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
