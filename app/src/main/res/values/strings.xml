@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">imdb</string>
+    <string name="fetch_failed">Failed to fetch movies</string>
+    <string name="release_date">Release on: %s</string>
+    <string name="popularity">Popularity :</string>
+    <string name="votes">(%.1f/10)</string>
+    <string name="voters">votes by %d users</string>
+    <string name="search_text">Search movie</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="up_coming">Upcoming</string>
+    <string name="search">Search</string>
+    <string name="cast_fetch_failed">Failed to fetch cast list</string>
+</resources>

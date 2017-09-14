@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/details_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/details_marginTop"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/details_title_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/details_releaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/details_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/details_info_size" />
+
+            <TextView
+                android:id="@+id/details_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/details_releaseDate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/details_info_size" />
+
+            <TextView
+                android:id="@+id/details_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/details_genre"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/details_info_size" />
+
+            <RelativeLayout
+                android:id="@+id/details_description_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/details_duration"
+                android:layout_marginLeft="@dimen/marginLeft"
+                android:layout_marginTop="@dimen/details_marginTop">
+
+                <ImageView
+                    android:id="@+id/details_posterImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/details_tagline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/details_posterImage"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/details_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/details_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/details_tagline"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="@dimen/details_marginTop"
+                    android:layout_toRightOf="@id/details_posterImage"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/details_text_size" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/details_description_layout"
+                android:layout_marginTop="@dimen/details_marginTop"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:id="@+id/details_rating_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider"
+                android:layout_marginLeft="@dimen/marginLeft"
+                android:layout_marginTop="@dimen/details_marginTop">
+
+                <TextView
+                    android:id="@+id/details_votes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/star"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/details_title_size" />
+
+                <TextView
+                    android:id="@+id/details_voters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginLeft"
+                    android:layout_toRightOf="@id/details_votes"
+                    android:text="@string/voters"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/details_text_size" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/details_castList"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/details_rating_layout"
+                android:layout_marginLeft="@dimen/marginLeft"
+                android:layout_marginTop="@dimen/details_marginTop" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

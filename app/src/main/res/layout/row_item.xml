@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="7dp"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="75dp"
+            android:layout_marginLeft="@dimen/marginLeft"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/itemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginLeft"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_toRightOf="@id/itemImage"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/itemReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemTitle"
+            android:layout_marginLeft="@dimen/marginLeft"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_toRightOf="@id/itemImage"
+            android:text="@string/release_date"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size"/>
+
+        <RelativeLayout
+            android:id="@+id/rating_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemReleaseDate"
+            android:layout_marginLeft="@dimen/marginLeft"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_toRightOf="@id/itemImage">
+
+            <TextView
+                android:id="@+id/itemPopularity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popularity"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size"/>
+
+            <RatingBar
+                android:id="@+id/itemRating"
+                android:layout_toRightOf="@id/itemPopularity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:numStars="5"
+                android:stepSize="0.01"
+                style="?android:ratingBarStyleSmall"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:drawablePadding="10dp"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_below="@id/rating_layout"
+            android:layout_marginLeft="@dimen/marginLeft"
+            android:layout_toRightOf="@id/itemImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:drawableLeft="@drawable/star"
+                android:id="@+id/itemVotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:gravity="center_vertical"
+                android:drawablePadding="10dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size"/>
+
+            <TextView
+                android:id="@+id/itemVoters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/voters"
+                android:layout_toRightOf="@id/itemVotes"
+                android:textColor="@color/text_color"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/text_size"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
